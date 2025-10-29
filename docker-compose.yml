@@ -1,0 +1,8 @@
+services:
+  rabbitmq-py:
+    image: rabbitmq:4.2.0
+    container_name: rabbitmq-py
+    hostname: rabbitmq-py
+    ports:
+      - "5672:5672"
+      - "15672:15672"
