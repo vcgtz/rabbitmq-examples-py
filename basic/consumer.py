@@ -26,7 +26,7 @@ def main():
 
     channel.basic_consume(
         queue=QUEUE_NAME,
-        auto_ack=True,
+        auto_ack=True, # This param set the ack automatically but it can cause message lost
         on_message_callback=callback
     )
 

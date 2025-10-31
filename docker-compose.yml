@@ -1,8 +1,11 @@
 services:
   rabbitmq-py:
-    image: rabbitmq:4.2.0
+    image: rabbitmq:4.2.0-management
     container_name: rabbitmq-py
     hostname: rabbitmq-py
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=4dm1n
     ports:
       - "5672:5672"
       - "15672:15672"
